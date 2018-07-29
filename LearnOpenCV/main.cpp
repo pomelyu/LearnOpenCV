@@ -7,9 +7,14 @@
 //
 
 #include <iostream>
+#include "src/L02_Basic.cpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    int index = 0;
+    switch (index) {
+        case 0: ch02_basic(); break;
+        default: break;
+    }
+
     return 0;
 }
