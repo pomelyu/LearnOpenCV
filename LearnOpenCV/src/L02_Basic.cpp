@@ -46,5 +46,38 @@ void ch02_basic() {
     // $$ Save gray image
     imwrite("out/lenna_gray.png", gray);
     
+    // $$ Split image into three color channels
+    Mat black = Mat::zeros(s, CV_8U);
+    vector<Mat> rgb_channels;
+    split(image, rgb_channels);
+    Mat B, G, R;
+    vector<Mat> b_channels = { rgb_channels[0], black, black };
+    vector<Mat> g_channels = { black, rgb_channels[1], black };
+    vector<Mat> r_channels = { black, black, rgb_channels[2] };
+    merge(b_channels, B);
+    merge(g_channels, G);
+    merge(r_channels, R);
+    vector<Mat> show_colors = { image, B, G, R };
+    ShowManyImages("BGR Color Channels", show_colors);
+    
+    // $$ Split image into HSV channels
+    Mat hsv = Mat(s, CV_8UC3);
+    cvtColor(image, hsv, CV_BGR2HSV);
+    
+    vector<Mat> hsv_channels;
+    split(hsv, hsv_channels);
+    
+    double h_min, h_max, s_min, s_max, v_min, v_max;
+    minMaxLoc(hsv_channels[0], &h_min, &h_max); // In openCV, this range of Hue is 0 ~ 179 (8bit)
+    minMaxLoc(hsv_channels[1], &s_min, &s_max);
+    minMaxLoc(hsv_channels[2], &v_min, &v_max);
+    cout << "Hue: [" << h_min << ", " << h_max << "], "
+         << "Saturation: [" << s_min << ", " << s_max << "], "
+         << "Value: [" << v_min << ", " << v_max << "]" << endl;
+    
+    vector<Mat> show_hsv = { image, hsv_channels[0], hsv_channels[1], hsv_channels[2] };
+    ShowManyImages("HSV Color Channels", show_hsv);
+    
+    
     destroyAllWindows();
 }
