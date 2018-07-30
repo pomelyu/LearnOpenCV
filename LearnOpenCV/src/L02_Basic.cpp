@@ -29,13 +29,9 @@ void ch02_basic() {
          << endl;
     MatType(image);
     
-    namedWindow("Origin", WINDOW_AUTOSIZE);
-    imshow("Origin", image);
-    waitKey(0);
-    
     // $$ Convert to gray scale
     Mat gray(s, CV_8U);
-    cvtColor(image, gray, CV_RGB2GRAY);
+    cvtColor(image, gray, CV_BGR2GRAY);
     
     // $$ Show gray image information
     cout << "Gray scale image with height: " << gray.size().height
@@ -44,9 +40,8 @@ void ch02_basic() {
          << endl;
     MatType(gray);
     
-    namedWindow("Gray", WINDOW_AUTOSIZE);
-    imshow("Gray", gray);
-    waitKey(0);
+    vector<Mat> shows = { image, gray };
+    ShowManyImages("Convert to Gray", shows);
     
     // $$ Save gray image
     imwrite("out/lenna_gray.png", gray);
