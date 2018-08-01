@@ -94,7 +94,7 @@
 		9ADDE06B210B601900E4BB00 /* libopencv_bioinspired.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE015210B601900E4BB00 /* libopencv_bioinspired.3.4.2.dylib */; };
 		9ADDE06C210B601900E4BB00 /* libopencv_face.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE016210B601900E4BB00 /* libopencv_face.3.4.2.dylib */; };
 		9ADDE06D210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE017210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib */; };
-		9ADDE07E2111528900E4BB00 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE07C2111528900E4BB00 /* utils.cpp */; };
+		9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE07C2111528900E4BB00 /* utils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -203,6 +203,8 @@
 		9ADDE075210E013500E4BB00 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		9ADDE07C2111528900E4BB00 /* utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
 		9ADDE07D2111528900E4BB00 /* utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils.hpp; sourceTree = "<group>"; };
+		9ADDE07F211153D700E4BB00 /* L02_2_Histogram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L02_2_Histogram.cpp; sourceTree = "<group>"; };
+		9ADDE081211153F100E4BB00 /* louvre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = louvre.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +336,7 @@
 		9ADDDFBE210B5C7100E4BB00 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				9ADDE081211153F100E4BB00 /* louvre.jpg */,
 				9ADDDFC0210B5CB100E4BB00 /* lena.bmp */,
 			);
 			path = res;
@@ -435,6 +438,7 @@
 		9ADDE06E210B60BE00E4BB00 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				9ADDE07F211153D700E4BB00 /* L02_2_Histogram.cpp */,
 				9ADDE06F210DF56900E4BB00 /* L02_Basic.cpp */,
 			);
 			path = src;
@@ -506,7 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ADDDEB3210B599B00E4BB00 /* main.cpp in Sources */,
-				9ADDE07E2111528900E4BB00 /* utils.cpp in Sources */,
+				9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
