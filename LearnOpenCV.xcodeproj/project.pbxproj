@@ -95,6 +95,7 @@
 		9ADDE06C210B601900E4BB00 /* libopencv_face.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE016210B601900E4BB00 /* libopencv_face.3.4.2.dylib */; };
 		9ADDE06D210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE017210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib */; };
 		9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE07C2111528900E4BB00 /* utils.cpp */; };
+		9ADDE089211160C500E4BB00 /* libcvplot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE088211160C500E4BB00 /* libcvplot.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -205,6 +206,12 @@
 		9ADDE07D2111528900E4BB00 /* utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils.hpp; sourceTree = "<group>"; };
 		9ADDE07F211153D700E4BB00 /* L02_2_Histogram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L02_2_Histogram.cpp; sourceTree = "<group>"; };
 		9ADDE081211153F100E4BB00 /* louvre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = louvre.jpg; sourceTree = "<group>"; };
+		9ADDE088211160C500E4BB00 /* libcvplot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcvplot.a; sourceTree = "<group>"; };
+		9ADDE08C2111682700E4BB00 /* highgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = highgui.h; sourceTree = "<group>"; };
+		9ADDE08D2111682700E4BB00 /* figure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = figure.h; sourceTree = "<group>"; };
+		9ADDE08E2111682700E4BB00 /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
+		9ADDE08F2111682700E4BB00 /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
+		9ADDE0902111682700E4BB00 /* cvplot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvplot.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ADDE089211160C500E4BB00 /* libcvplot.a in Frameworks */,
 				9ADDE018210B601900E4BB00 /* libopencv_calib3d.3.4.2.dylib in Frameworks */,
 				9ADDE019210B601900E4BB00 /* libopencv_dnn.3.4.2.dylib in Frameworks */,
 				9ADDE01A210B601900E4BB00 /* libopencv_structured_light.3.4.2.dylib in Frameworks */,
@@ -325,6 +333,8 @@
 		9ADDDEB1210B599B00E4BB00 /* LearnOpenCV */ = {
 			isa = PBXGroup;
 			children = (
+				9ADDE08A2111680F00E4BB00 /* include */,
+				9ADDE08521115FF100E4BB00 /* lib */,
 				9ADDE071210DF8D600E4BB00 /* util */,
 				9ADDE06E210B60BE00E4BB00 /* src */,
 				9ADDDFBE210B5C7100E4BB00 /* res */,
@@ -451,6 +461,34 @@
 				9ADDE07D2111528900E4BB00 /* utils.hpp */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		9ADDE08521115FF100E4BB00 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				9ADDE088211160C500E4BB00 /* libcvplot.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		9ADDE08A2111680F00E4BB00 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				9ADDE08B2111682700E4BB00 /* cvplot */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		9ADDE08B2111682700E4BB00 /* cvplot */ = {
+			isa = PBXGroup;
+			children = (
+				9ADDE08C2111682700E4BB00 /* highgui.h */,
+				9ADDE08D2111682700E4BB00 /* figure.h */,
+				9ADDE08E2111682700E4BB00 /* window.h */,
+				9ADDE08F2111682700E4BB00 /* color.h */,
+				9ADDE0902111682700E4BB00 /* cvplot.h */,
+			);
+			path = cvplot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,7 +673,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/LearnOpenCV/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -645,7 +686,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/LearnOpenCV/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
