@@ -113,7 +113,6 @@
 /* Begin PBXFileReference section */
 		9ADDDEAF210B599B00E4BB00 /* LearnOpenCV */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnOpenCV; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADDDEB2210B599B00E4BB00 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		9ADDDFC0210B5CB100E4BB00 /* lena.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = lena.bmp; sourceTree = "<group>"; };
 		9ADDDFC2210B601800E4BB00 /* libopencv_calib3d.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_calib3d.3.4.2.dylib; sourceTree = "<group>"; };
 		9ADDDFC3210B601800E4BB00 /* libopencv_dnn.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_dnn.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_dnn.3.4.2.dylib; sourceTree = "<group>"; };
 		9ADDDFC4210B601800E4BB00 /* libopencv_structured_light.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_structured_light.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_structured_light.3.4.2.dylib; sourceTree = "<group>"; };
@@ -212,6 +211,7 @@
 		9ADDE08E2111682700E4BB00 /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
 		9ADDE08F2111682700E4BB00 /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
 		9ADDE0902111682700E4BB00 /* cvplot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvplot.h; sourceTree = "<group>"; };
+		9ADDE0912111A7D500E4BB00 /* lenna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lenna.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,7 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				9ADDE081211153F100E4BB00 /* louvre.jpg */,
-				9ADDDFC0210B5CB100E4BB00 /* lena.bmp */,
+				9ADDE0912111A7D500E4BB00 /* lenna.png */,
 			);
 			path = res;
 			sourceTree = "<group>";
