@@ -7,13 +7,13 @@
 //
 
 #include <iostream>
-#include "src/L02_Basic.cpp"
+#include "src/L02_1_Basic.cpp"
 #include "src/L02_2_Histogram.cpp"
 
 int main(int argc, const char * argv[]) {
     int index = 1;
     switch (index) {
-        case 0: ch02_basic(); break;
+        case 0: ch02_1_basic(); break;
         case 1: ch02_2_histogram(); break;
         default: break;
     }

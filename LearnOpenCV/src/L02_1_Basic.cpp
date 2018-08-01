@@ -14,7 +14,7 @@
 using namespace std;
 using namespace cv;
 
-void ch02_basic() {
+void ch02_1_basic() {
     // $$ Load image
     Mat image = imread("res/lenna.png");
     

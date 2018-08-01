@@ -199,7 +199,7 @@
 		9ADDE015210B601900E4BB00 /* libopencv_bioinspired.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_bioinspired.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_bioinspired.3.4.2.dylib; sourceTree = "<group>"; };
 		9ADDE016210B601900E4BB00 /* libopencv_face.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_face.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_face.3.4.2.dylib; sourceTree = "<group>"; };
 		9ADDE017210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_line_descriptor.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_line_descriptor.3.4.2.dylib; sourceTree = "<group>"; };
-		9ADDE06F210DF56900E4BB00 /* L02_Basic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = L02_Basic.cpp; sourceTree = "<group>"; };
+		9ADDE06F210DF56900E4BB00 /* L02_1_Basic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = L02_1_Basic.cpp; sourceTree = "<group>"; };
 		9ADDE075210E013500E4BB00 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		9ADDE07C2111528900E4BB00 /* utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
 		9ADDE07D2111528900E4BB00 /* utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils.hpp; sourceTree = "<group>"; };
@@ -449,7 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				9ADDE07F211153D700E4BB00 /* L02_2_Histogram.cpp */,
-				9ADDE06F210DF56900E4BB00 /* L02_Basic.cpp */,
+				9ADDE06F210DF56900E4BB00 /* L02_1_Basic.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
