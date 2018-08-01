@@ -94,6 +94,7 @@
 		9ADDE06B210B601900E4BB00 /* libopencv_bioinspired.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE015210B601900E4BB00 /* libopencv_bioinspired.3.4.2.dylib */; };
 		9ADDE06C210B601900E4BB00 /* libopencv_face.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE016210B601900E4BB00 /* libopencv_face.3.4.2.dylib */; };
 		9ADDE06D210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE017210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib */; };
+		9ADDE07E2111528900E4BB00 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE07C2111528900E4BB00 /* utils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -199,8 +200,9 @@
 		9ADDE016210B601900E4BB00 /* libopencv_face.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_face.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_face.3.4.2.dylib; sourceTree = "<group>"; };
 		9ADDE017210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_line_descriptor.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_line_descriptor.3.4.2.dylib; sourceTree = "<group>"; };
 		9ADDE06F210DF56900E4BB00 /* L02_Basic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = L02_Basic.cpp; sourceTree = "<group>"; };
-		9ADDE072210DF8EF00E4BB00 /* utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
 		9ADDE075210E013500E4BB00 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		9ADDE07C2111528900E4BB00 /* utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
+		9ADDE07D2111528900E4BB00 /* utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,7 +443,8 @@
 		9ADDE071210DF8D600E4BB00 /* util */ = {
 			isa = PBXGroup;
 			children = (
-				9ADDE072210DF8EF00E4BB00 /* utils.cpp */,
+				9ADDE07C2111528900E4BB00 /* utils.cpp */,
+				9ADDE07D2111528900E4BB00 /* utils.hpp */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ADDDEB3210B599B00E4BB00 /* main.cpp in Sources */,
+				9ADDE07E2111528900E4BB00 /* utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

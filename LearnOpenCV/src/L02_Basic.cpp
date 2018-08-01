@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
 
-#include "../util/utils.cpp"
+#include "../util/utils.hpp"
 
 using namespace std;
 using namespace cv;
