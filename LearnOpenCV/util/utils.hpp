@@ -16,6 +16,6 @@ using namespace std;
 using namespace cv;
 
 void MatType( Mat inputMat );
-void ShowManyImages(string title, vector<Mat> images);
+void ShowImages(string title, vector<string> subtitles, vector<Mat> images, pair<int, int> grid, int size=450);
 
 #endif /* utils_hpp */

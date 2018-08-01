@@ -40,8 +40,11 @@ void ch02_basic() {
          << endl;
     MatType(gray);
     
-    vector<Mat> shows = { image, gray };
-    ShowManyImages("Convert to Gray", shows);
+    {
+        vector<string> subtitles = {"image", "gray"};
+        vector<Mat> images = {image, gray};
+        ShowImages("Gray image", subtitles, images, {1, 2});
+    }
     
     // $$ Save gray image
     imwrite("out/lenna_gray.png", gray);
@@ -57,8 +60,13 @@ void ch02_basic() {
     merge(b_channels, B);
     merge(g_channels, G);
     merge(r_channels, R);
-    vector<Mat> show_colors = { image, B, G, R };
-    ShowManyImages("BGR Color Channels", show_colors);
+    
+    {
+        vector<string> subtitles = {"image", "Blue", "Green", "Red"};
+        vector<Mat> images = {image, B, G, R};
+        ShowImages("RGB Channels", subtitles, images, {1, 4}, 300);
+    }
+    
     
     // $$ Split image into HSV channels
     Mat hsv = Mat(s, CV_8UC3);
@@ -75,9 +83,9 @@ void ch02_basic() {
          << "Saturation: [" << s_min << ", " << s_max << "], "
          << "Value: [" << v_min << ", " << v_max << "]" << endl;
     
-    vector<Mat> show_hsv = { image, hsv_channels[0], hsv_channels[1], hsv_channels[2] };
-    ShowManyImages("HSV Color Channels", show_hsv);
-    
-    
-    destroyAllWindows();
+    {
+        vector<string> subtitles = {"image", "Hue", "Saturation", "Value"};
+        vector<Mat> images = {image, hsv_channels[0], hsv_channels[1], hsv_channels[2]};
+        ShowImages("HSV Channels", subtitles, images, {1, 4}, 300);
+    }
 }
