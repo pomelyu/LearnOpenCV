@@ -8,31 +8,15 @@
 
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
+#include "cvplot.h"
 
 #include "../util/utils.hpp"
 
 using namespace std;
 using namespace cv;
 
-void drawHistImg(const Mat &src, Mat &dst){
-    int histSize = 256;
-    float histMaxValue = 0;
-    for(int i=0; i<histSize; i++){
-        float tempValue = src.at<float>(i);
-        if(histMaxValue < tempValue){
-            histMaxValue = tempValue;
-        }
-    }
-    
-    float scale = (0.9*256)/histMaxValue;
-    for(int i=0; i<histSize; i++){
-        int intensity = static_cast<int>(src.at<float>(i)*scale);
-        line(dst,Point(i,255),Point(i,255-intensity),Scalar(0));
-    }
-}
-
 void ch02_2_histogram() {
-    Mat image = imread("res/lenna.png");
+    Mat image = imread("res/louvre.jpg");
     
     int bins = 256;
     int histSize = bins;
@@ -40,30 +24,68 @@ void ch02_2_histogram() {
     const float* ranges[] = {colorRange};
     
     vector<Mat> hists;
-    double maxHistValue = 0;
     for (int channel = 0; channel < 3; channel++) {
         Mat hist;
         calcHist(&image, 1, &channel, Mat(), hist, 1, &histSize, ranges, true, false);
-        double maxValue;
-        minMaxLoc(hist, 0, &maxValue, 0, 0);
-        
         hists.push_back(hist);
-        maxHistValue = max(maxHistValue, maxValue);
     }
     
-    int scale = 20;
-    Mat histImage = Mat(maxHistValue, bins*scale, CV_8UC3, Scalar(255, 255, 255));
-    Scalar colors[] = {Scalar(0, 0, 255), Scalar(0, 255, 0), Scalar(255, 0, 0)};
-    for(int i = 0; i < 3; i++) {
-        Mat hist = hists[i];
-        Scalar color = colors[i];
-        for(int j = 0; j < bins - 1; j++) {
-            Point p1(scale*j, maxHistValue - hist.at<float>(j));
-            Point p2(scale*(j+1), maxHistValue - hist.at<float>(j+1));
-            line(histImage, p1, p2, color, scale);
-        }
+    Mat gray = Mat(image.size(), CV_8U);
+    cvtColor(image, gray, CV_BGR2GRAY);
+    Mat grayHist;
+    calcHist(&gray, 1, 0, Mat(), grayHist, 1, &histSize, ranges, true, false);
+
+    
+    // Visualize Histogram
+    auto FRAME_SIZE = 450;
+    vector<pair<float, float>> data;
+    cvplot::Window::current("Color Histogram").offset({60, 100});
+
+    {
+        auto name = "image";
+        cvplot::setWindowTitle(name, "image");
+        cvplot::moveWindow(name, 0, 0);
+        cvplot::resizeWindow(name, FRAME_SIZE, FRAME_SIZE);
+        auto &view = cvplot::Window::current().view(name);
+        view.drawImage(&image);
+        view.finish();
     }
     
-    vector<Mat> images = { image, histImage };
-    ShowManyImages("Histogram", images);
+    {
+        auto name = "gray hist";
+        cvplot::setWindowTitle(name, "intensity histogram");
+        cvplot::moveWindow(name, FRAME_SIZE, 0);
+        cvplot::resizeWindow(name, FRAME_SIZE, FRAME_SIZE);
+        auto &figure = cvplot::figure(name);
+        data.clear();
+        for (int i = 0; i < bins-1; i++) { data.push_back({i, grayHist.at<float>(i)}); }
+        figure.series("intensity").set(data).type(cvplot::Histogram).color(cvplot::Black);
+        
+        figure.show(false);
+    }
+    
+
+    {
+        auto name = "color hist";
+        cvplot::setWindowTitle(name, "color histogram");
+        cvplot::moveWindow(name, FRAME_SIZE*2, 0);
+        cvplot::resizeWindow(name, FRAME_SIZE, FRAME_SIZE);
+        auto &figure = cvplot::figure(name);
+
+        data.clear();
+        for (int i = 0; i < bins-1; i++) { data.push_back({i, hists[0].at<float>(i)}); }
+        figure.series("blue").set(data).type(cvplot::Line).color(cvplot::Blue);
+
+        data.clear();
+        for (int i = 0; i < bins-1; i++) { data.push_back({i, hists[1].at<float>(i)}); }
+        figure.series("green").set(data).type(cvplot::Line).color(cvplot::Green);
+
+        data.clear();
+        for (int i = 0; i < bins-1; i++) { data.push_back({i, hists[2].at<float>(i)}); }
+        figure.series("red").set(data).type(cvplot::Line).color(cvplot::Red);
+
+        figure.show(true);
+    }
+    
+    waitKey();
 }
