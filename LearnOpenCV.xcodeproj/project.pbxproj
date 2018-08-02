@@ -96,6 +96,7 @@
 		9ADDE06D210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE017210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib */; };
 		9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE07C2111528900E4BB00 /* utils.cpp */; };
 		9ADDE089211160C500E4BB00 /* libcvplot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE088211160C500E4BB00 /* libcvplot.a */; };
+		9ADDE0962112946200E4BB00 /* L03_2_Mask.h in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE095211293FF00E4BB00 /* L03_2_Mask.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -213,6 +214,7 @@
 		9ADDE0902111682700E4BB00 /* cvplot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvplot.h; sourceTree = "<group>"; };
 		9ADDE0912111A7D500E4BB00 /* lenna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lenna.png; sourceTree = "<group>"; };
 		9ADDE0922111ECA300E4BB00 /* L03_1_Transform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = L03_1_Transform.cpp; sourceTree = "<group>"; };
+		9ADDE095211293FF00E4BB00 /* L03_2_Mask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_2_Mask.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,6 +454,7 @@
 				9ADDE06F210DF56900E4BB00 /* L02_1_Basic.cpp */,
 				9ADDE07F211153D700E4BB00 /* L02_2_Histogram.cpp */,
 				9ADDE0922111ECA300E4BB00 /* L03_1_Transform.cpp */,
+				9ADDE095211293FF00E4BB00 /* L03_2_Mask.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ADDE0962112946200E4BB00 /* L03_2_Mask.h in Sources */,
 				9ADDDEB3210B599B00E4BB00 /* main.cpp in Sources */,
 				9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */,
 			);
