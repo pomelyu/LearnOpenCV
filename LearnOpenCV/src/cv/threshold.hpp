@@ -14,7 +14,7 @@
 
 using namespace cv;
 
-void meanBinaryThreshold(Mat& src, Mat& dst, int blockSize, double C);
-void gaussianBinaryThreshold(Mat& src, Mat& dst, int blockSize, double C);
+void meanBinaryThreshold(const Mat& src, Mat& dst, const int blockSize, const double C);
+void gaussianBinaryThreshold(const Mat& src, Mat& dst, const int blockSize, const double C);
 
 #endif /* threshold_hpp */
