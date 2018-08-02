@@ -13,9 +13,10 @@
 #include "src/L03_2_Mask.h"
 #include "src/L03_3_Kernel.h"
 #include "src/L03_4_Denoise.h"
+#include "src/L03_5_Thresholding.h"
 
 int main(int argc, const char * argv[]) {
-    int index = 5;
+    int index = 6;
     switch (index) {
         case 0: ch02_1_basic(); break;
         case 1: ch02_2_histogram(); break;
@@ -23,6 +24,7 @@ int main(int argc, const char * argv[]) {
         case 3: ch03_2_mask(); break;
         case 4: ch03_3_kernel(); break;
         case 5: ch03_4_denoise(); break;
+        case 6: ch03_5_thresholding(); break;
         default: break;
     }
 

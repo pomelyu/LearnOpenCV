@@ -216,6 +216,8 @@
 		9ADDE09A21129DF500E4BB00 /* L03_1_Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_1_Transform.h; sourceTree = "<group>"; };
 		9ADDE09B2112A78B00E4BB00 /* L03_3_Kernel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_3_Kernel.h; sourceTree = "<group>"; };
 		9ADDE09C2112D5DB00E4BB00 /* L03_4_Denoise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_4_Denoise.h; sourceTree = "<group>"; };
+		9ADDE09E21130F7C00E4BB00 /* L03_5_Thresholding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_5_Thresholding.h; sourceTree = "<group>"; };
+		9AEB425C2113177800E90590 /* soduku.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soduku.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +352,7 @@
 		9ADDDFBE210B5C7100E4BB00 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				9AEB425C2113177800E90590 /* soduku.jpg */,
 				9ADDE081211153F100E4BB00 /* louvre.jpg */,
 				9ADDE0912111A7D500E4BB00 /* lenna.png */,
 			);
@@ -458,6 +461,7 @@
 				9ADDE095211293FF00E4BB00 /* L03_2_Mask.h */,
 				9ADDE09B2112A78B00E4BB00 /* L03_3_Kernel.h */,
 				9ADDE09C2112D5DB00E4BB00 /* L03_4_Denoise.h */,
+				9ADDE09E21130F7C00E4BB00 /* L03_5_Thresholding.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
