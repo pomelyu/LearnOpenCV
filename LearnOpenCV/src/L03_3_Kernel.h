@@ -28,6 +28,7 @@ void ch03_3_kernel() {
     
     vector<Mat> images = { peak, image };
     
+    // Kernels
     Mat avg_kernel(10, 10, CV_32F, Scalar(1.0f/100));
     vector<Mat> filteredAvg = applyKernel(images, avg_kernel);
     
@@ -71,6 +72,33 @@ void ch03_3_kernel() {
             filteredSobelY[0], filteredSobelY[1],
         };
         ShowImages("Kernels", subtitles, images, {2, 5}, 250, false);
+    }
+    
+    
+    // Kernels: Blur
+    Mat filteredPeakGaussian;
+    Mat filteredGaussian;
+    GaussianBlur(peak, filteredPeakGaussian, Size(9, 9), 1, 20);
+    GaussianBlur(image, filteredGaussian, Size(9, 9), 1, 20);
+    
+    // Bilateral blur would perse edge
+    Mat filteredPeakBilateral;
+    Mat filteredBilateral;
+    bilateralFilter(peak, filteredPeakBilateral, 9, 30, 30);
+    bilateralFilter(image, filteredBilateral, 9, 30, 30);
+    
+    {
+        vector<string> subtitles = {
+            "peak", "image",
+            "gaussian", "gaussian",
+            "bilateral", "bilateral",
+        };
+        vector<Mat> images = {
+            peak, image,
+            filteredPeakGaussian, filteredGaussian,
+            filteredPeakBilateral, filteredBilateral,
+        };
+        ShowImages("Kernels Blur", subtitles, images, {2, 3}, 300, false);
     }
 }
 
