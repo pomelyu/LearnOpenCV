@@ -49,6 +49,16 @@ void ch03_5_thresholding() {
         vector<Mat> images = {image, thresBinary, thresMean, thresGaussian};
         ShowImages("Adaptive thresholding", subtitles, images, {2, 2}, 300);
     }
+    
+    Mat myMean;
+    meanBinaryThreshold(image, myMean, 11, 2);
+    Mat myGaussian;
+    gaussianBinaryThreshold(image, myGaussian, 11, 2);
+    {
+        vector<string> subtitles = { "ada-mean", "my-mean", "ada-gaussian", "my-gaussian" };
+        vector<Mat> images = {thresMean, myMean, thresGaussian, myGaussian};
+        ShowImages("Adaptive thresholding", subtitles, images, {2, 2}, 300);
+    }
 }
 
 #endif /* L03_5_Thresholding_h */

@@ -96,6 +96,7 @@
 		9ADDE06D210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE017210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib */; };
 		9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE07C2111528900E4BB00 /* utils.cpp */; };
 		9ADDE089211160C500E4BB00 /* libcvplot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE088211160C500E4BB00 /* libcvplot.a */; };
+		9AEB42622113194F00E90590 /* threshold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB42602113194F00E90590 /* threshold.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -218,6 +219,8 @@
 		9ADDE09C2112D5DB00E4BB00 /* L03_4_Denoise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_4_Denoise.h; sourceTree = "<group>"; };
 		9ADDE09E21130F7C00E4BB00 /* L03_5_Thresholding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_5_Thresholding.h; sourceTree = "<group>"; };
 		9AEB425C2113177800E90590 /* soduku.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soduku.jpg; sourceTree = "<group>"; };
+		9AEB42602113194F00E90590 /* threshold.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = threshold.cpp; sourceTree = "<group>"; };
+		9AEB42612113194F00E90590 /* threshold.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = threshold.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -455,6 +458,7 @@
 		9ADDE06E210B60BE00E4BB00 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				9AEB425F2113193B00E90590 /* cv */,
 				9ADDE09721129D2C00E4BB00 /* L02_1_Basic.h */,
 				9ADDE09821129D7C00E4BB00 /* L02_2_Histogram.h */,
 				9ADDE09A21129DF500E4BB00 /* L03_1_Transform.h */,
@@ -501,6 +505,15 @@
 				9ADDE0902111682700E4BB00 /* cvplot.h */,
 			);
 			path = cvplot;
+			sourceTree = "<group>";
+		};
+		9AEB425F2113193B00E90590 /* cv */ = {
+			isa = PBXGroup;
+			children = (
+				9AEB42602113194F00E90590 /* threshold.cpp */,
+				9AEB42612113194F00E90590 /* threshold.hpp */,
+			);
+			path = cv;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ADDDEB3210B599B00E4BB00 /* main.cpp in Sources */,
+				9AEB42622113194F00E90590 /* threshold.cpp in Sources */,
 				9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

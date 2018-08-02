@@ -33,10 +33,10 @@
 ### Todos
 
 - [ ] 03.5 Thresholding
-    - [ ] try simple thresholding
-    - [ ] try adaptive thresholding by mean kernel, gaussion weights, threshold_otsu
-    - [ ] implement  thresholding by mean kernel, gaussion weights
-    - [ ] study threshold_otsu method
+    - [x] try simple thresholding
+    - [x] try adaptive thresholding by mean kernel, gaussion weights
+    - [x] implement  thresholding by mean kernel, gaussion weights
+    - [ ] try and study threshold_otsu method
 - [ ] 03.6 Dilation & Erosion
     - [ ] try built-in dilation, erosion, opening and closing function
     - [ ] implement simple dilation, erosion, opening and closing
