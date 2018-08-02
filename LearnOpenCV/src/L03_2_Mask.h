@@ -67,7 +67,7 @@ void ch03_2_mask() {
             xorMask, maskedXor,
             invMask, maskedInv,
         };
-        ShowImages("Crop and Mask", subtitles, images, {3, 4}, 200);
+        ShowImages("Crop and Mask", subtitles, images, {2, 6}, 200, false);
     }
     
 }

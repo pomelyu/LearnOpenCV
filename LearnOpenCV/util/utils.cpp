@@ -41,18 +41,24 @@ void MatType( Mat inputMat )
 }
 
 
-void ShowImages(string title, vector<string> subtitles, vector<Mat> images, pair<int, int> grid, int size){
+void ShowImages(string title, vector<string> subtitles, vector<Mat> images, pair<int, int> grid, int size, bool rowFirst){
     cvplot::Window::current(title).offset({60, 100});
     
     assert(subtitles.size() == images.size());
     assert(subtitles.size() <= grid.first * grid.second);
     
     int index = 0;
-    for (int i = 0; i < grid.first; i++) {
-        for (int j = 0; j < grid.second; j++) {
+    int i_max = rowFirst ? grid.first : grid.second;
+    int j_max = rowFirst ? grid.second : grid.first;
+    for (int i = 0; i < i_max; i++) {
+        for (int j = 0; j < j_max; j++) {
             auto name = "image" + to_string(index);
             cvplot::setWindowTitle(name, subtitles[index]);
-            cvplot::moveWindow(name, j * size, i * size);
+            if (rowFirst) {
+                cvplot::moveWindow(name, j * size, i * size);
+            } else {
+                cvplot::moveWindow(name, i * size, j * size);
+            }
             cvplot::resizeWindow(name, size, size);
             auto &view = cvplot::Window::current().view(name);
             
