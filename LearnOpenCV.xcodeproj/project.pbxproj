@@ -215,6 +215,7 @@
 		9ADDE09821129D7C00E4BB00 /* L02_2_Histogram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L02_2_Histogram.h; sourceTree = "<group>"; };
 		9ADDE09A21129DF500E4BB00 /* L03_1_Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_1_Transform.h; sourceTree = "<group>"; };
 		9ADDE09B2112A78B00E4BB00 /* L03_3_Kernel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_3_Kernel.h; sourceTree = "<group>"; };
+		9ADDE09C2112D5DB00E4BB00 /* L03_4_Denoise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_4_Denoise.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +457,7 @@
 				9ADDE09A21129DF500E4BB00 /* L03_1_Transform.h */,
 				9ADDE095211293FF00E4BB00 /* L03_2_Mask.h */,
 				9ADDE09B2112A78B00E4BB00 /* L03_3_Kernel.h */,
+				9ADDE09C2112D5DB00E4BB00 /* L03_4_Denoise.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
