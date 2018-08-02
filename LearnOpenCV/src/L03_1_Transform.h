@@ -23,6 +23,14 @@ void ch03_1_transform() {
     Size s = image.size();
     int w = s.width;
     int h = s.height;
+    
+    
+    // Affine Transform: 仿射變換 — 線性變換，保持兩條線之間的平行關係
+    // transform matrix 為 2x3 或者是寫成 3x3 的 homogeneous 版本
+    // [[ a, b, c],
+    //  [ c, d, e],
+    //  [ 0, 0, 1]]
+    // 因為有效變數有六個，因此至少需要三個點才能解出轉換矩陣
     Mat scaleM = getRotationMatrix2D(Point2f(w/2, h/2), 0, 0.5);
     Mat rotateM = getRotationMatrix2D(Point2f(0, 0), 25, 1);
     Mat scaled, rotated;
