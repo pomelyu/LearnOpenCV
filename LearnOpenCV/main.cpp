@@ -14,9 +14,10 @@
 #include "src/L03_3_Kernel.h"
 #include "src/L03_4_Denoise.h"
 #include "src/L03_5_Thresholding.h"
+#include "src/L03_6_Dilation_and_Erosion.h"
 
 int main(int argc, const char * argv[]) {
-    int index = 6;
+    int index = 7;
     switch (index) {
         case 0: ch02_1_basic(); break;
         case 1: ch02_2_histogram(); break;
@@ -25,6 +26,7 @@ int main(int argc, const char * argv[]) {
         case 4: ch03_3_kernel(); break;
         case 5: ch03_4_denoise(); break;
         case 6: ch03_5_thresholding(); break;
+        case 7: ch03_6_dilation_and_erosion(); break;
         default: break;
     }
 

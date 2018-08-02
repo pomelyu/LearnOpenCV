@@ -23,6 +23,7 @@
 - 03.5 Thresholding
     - `cv::threshold`, `cv::adaptiveThreshold`
 - 03.6 Dilation & Erosion
+    - `cv::dilate`, `cv::erode`, `cv::morphologyEx`
 - 03.7 Edge detection
 - 03.8 Perspective Transform
 
@@ -38,9 +39,9 @@
     - [x] try adaptive thresholding by mean kernel, gaussion weights
     - [x] implement thresholding by mean kernel, gaussion weights
     - [x] try and study threshold_otsu method
-- [ ] 03.6 Dilation & Erosion
-    - [ ] try built-in dilation, erosion, opening and closing function
-    - [ ] implement simple dilation, erosion, opening and closing
+- [x] 03.6 Dilation & Erosion
+    - [x] try built-in dilation, erosion, opening and closing function
+    - [x] implement simple dilation, erosion, opening and closing
 - [ ] 03.7 Edge detection
     - [ ] try built-in Sobel, Laplacian, Canny Edge detection
     - [ ] implement Canny Edge detection

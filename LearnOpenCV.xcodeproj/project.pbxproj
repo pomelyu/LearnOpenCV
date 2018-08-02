@@ -97,6 +97,7 @@
 		9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE07C2111528900E4BB00 /* utils.cpp */; };
 		9ADDE089211160C500E4BB00 /* libcvplot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE088211160C500E4BB00 /* libcvplot.a */; };
 		9AEB42622113194F00E90590 /* threshold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB42602113194F00E90590 /* threshold.cpp */; };
+		9AEB426921134B4500E90590 /* morphology.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB426721134B4500E90590 /* morphology.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -221,6 +222,10 @@
 		9AEB425C2113177800E90590 /* soduku.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soduku.jpg; sourceTree = "<group>"; };
 		9AEB42602113194F00E90590 /* threshold.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = threshold.cpp; sourceTree = "<group>"; };
 		9AEB42612113194F00E90590 /* threshold.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = threshold.hpp; sourceTree = "<group>"; };
+		9AEB42642113442900E90590 /* L03_6_Dilation_and_Erosion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_6_Dilation_and_Erosion.h; sourceTree = "<group>"; };
+		9AEB42662113474800E90590 /* fingerprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fingerprint.png; sourceTree = "<group>"; };
+		9AEB426721134B4500E90590 /* morphology.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = morphology.cpp; sourceTree = "<group>"; };
+		9AEB426821134B4500E90590 /* morphology.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = morphology.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +360,7 @@
 		9ADDDFBE210B5C7100E4BB00 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				9AEB42662113474800E90590 /* fingerprint.png */,
 				9AEB425C2113177800E90590 /* soduku.jpg */,
 				9ADDE081211153F100E4BB00 /* louvre.jpg */,
 				9ADDE0912111A7D500E4BB00 /* lenna.png */,
@@ -466,6 +472,7 @@
 				9ADDE09B2112A78B00E4BB00 /* L03_3_Kernel.h */,
 				9ADDE09C2112D5DB00E4BB00 /* L03_4_Denoise.h */,
 				9ADDE09E21130F7C00E4BB00 /* L03_5_Thresholding.h */,
+				9AEB42642113442900E90590 /* L03_6_Dilation_and_Erosion.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -512,6 +519,8 @@
 			children = (
 				9AEB42602113194F00E90590 /* threshold.cpp */,
 				9AEB42612113194F00E90590 /* threshold.hpp */,
+				9AEB426721134B4500E90590 /* morphology.cpp */,
+				9AEB426821134B4500E90590 /* morphology.hpp */,
 			);
 			path = cv;
 			sourceTree = "<group>";
@@ -575,6 +584,7 @@
 				9ADDDEB3210B599B00E4BB00 /* main.cpp in Sources */,
 				9AEB42622113194F00E90590 /* threshold.cpp in Sources */,
 				9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */,
+				9AEB426921134B4500E90590 /* morphology.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
