@@ -51,7 +51,7 @@ void ShowImages(string title, vector<string> subtitles, vector<Mat> images, pair
     int i_max = rowFirst ? grid.first : grid.second;
     int j_max = rowFirst ? grid.second : grid.first;
     for (int i = 0; i < i_max; i++) {
-        for (int j = 0; j < j_max; j++) {
+        for (int j = 0; j < j_max & index < subtitles.size(); j++) {
             auto name = "image" + to_string(index);
             cvplot::setWindowTitle(name, subtitles[index]);
             if (rowFirst) {
