@@ -1,15 +1,18 @@
 //
-//  L02_Basic.cpp
+//  L02_1_Basic.h
 //  LearnOpenCV
 //
-//  Created by Chien Chin-yu on 2018/7/29.
+//  Created by Chien Chin-yu on 2018/8/2.
 //  Copyright © 2018 Chien Chin-yu. All rights reserved.
 //
+
+#ifndef L02_1_Basic_h
+#define L02_1_Basic_h
 
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
 
-#include "../util/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 using namespace cv;
@@ -24,9 +27,9 @@ void ch02_1_basic() {
     // $ Mat.channels() - # of channels (3 for color, 1 for gray)
     Size s = image.size();
     cout << "Load image with height: " << s.height
-         << ", width: " << s.width
-         << ", channels: " << image.channels()
-         << endl;
+    << ", width: " << s.width
+    << ", channels: " << image.channels()
+    << endl;
     MatType(image);
     
     // $$ Convert to gray scale
@@ -35,9 +38,9 @@ void ch02_1_basic() {
     
     // $$ Show gray image information
     cout << "Gray scale image with height: " << gray.size().height
-         << ", width: " << gray.size().width
-         << ", channels: " << gray.channels()
-         << endl;
+    << ", width: " << gray.size().width
+    << ", channels: " << gray.channels()
+    << endl;
     MatType(gray);
     
     {
@@ -80,8 +83,8 @@ void ch02_1_basic() {
     minMaxLoc(hsv_channels[1], &s_min, &s_max);
     minMaxLoc(hsv_channels[2], &v_min, &v_max);
     cout << "Hue: [" << h_min << ", " << h_max << "], "
-         << "Saturation: [" << s_min << ", " << s_max << "], "
-         << "Value: [" << v_min << ", " << v_max << "]" << endl;
+    << "Saturation: [" << s_min << ", " << s_max << "], "
+    << "Value: [" << v_min << ", " << v_max << "]" << endl;
     
     {
         vector<string> subtitles = {"image", "Hue", "Saturation", "Value"};
@@ -89,3 +92,5 @@ void ch02_1_basic() {
         ShowImages("HSV Channels", subtitles, images, {1, 4}, 300);
     }
 }
+
+#endif /* L02_1_Basic_h */

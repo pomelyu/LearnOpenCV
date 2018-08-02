@@ -7,9 +7,9 @@
 //
 
 #include <iostream>
-#include "src/L02_1_Basic.cpp"
-#include "src/L02_2_Histogram.cpp"
-#include "src/L03_1_Transform.cpp"
+#include "src/L02_1_Basic.h"
+#include "src/L02_2_Histogram.h"
+#include "src/L03_1_Transform.h"
 #include "src/L03_2_Mask.h"
 
 int main(int argc, const char * argv[]) {

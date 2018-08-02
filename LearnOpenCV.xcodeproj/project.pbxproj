@@ -96,7 +96,6 @@
 		9ADDE06D210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE017210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib */; };
 		9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE07C2111528900E4BB00 /* utils.cpp */; };
 		9ADDE089211160C500E4BB00 /* libcvplot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE088211160C500E4BB00 /* libcvplot.a */; };
-		9ADDE0962112946200E4BB00 /* L03_2_Mask.h in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDE095211293FF00E4BB00 /* L03_2_Mask.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -200,11 +199,9 @@
 		9ADDE015210B601900E4BB00 /* libopencv_bioinspired.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_bioinspired.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_bioinspired.3.4.2.dylib; sourceTree = "<group>"; };
 		9ADDE016210B601900E4BB00 /* libopencv_face.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_face.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_face.3.4.2.dylib; sourceTree = "<group>"; };
 		9ADDE017210B601900E4BB00 /* libopencv_line_descriptor.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_line_descriptor.3.4.2.dylib; path = ../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_line_descriptor.3.4.2.dylib; sourceTree = "<group>"; };
-		9ADDE06F210DF56900E4BB00 /* L02_1_Basic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = L02_1_Basic.cpp; sourceTree = "<group>"; };
 		9ADDE075210E013500E4BB00 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		9ADDE07C2111528900E4BB00 /* utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
 		9ADDE07D2111528900E4BB00 /* utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils.hpp; sourceTree = "<group>"; };
-		9ADDE07F211153D700E4BB00 /* L02_2_Histogram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L02_2_Histogram.cpp; sourceTree = "<group>"; };
 		9ADDE081211153F100E4BB00 /* louvre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = louvre.jpg; sourceTree = "<group>"; };
 		9ADDE088211160C500E4BB00 /* libcvplot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcvplot.a; sourceTree = "<group>"; };
 		9ADDE08C2111682700E4BB00 /* highgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = highgui.h; sourceTree = "<group>"; };
@@ -213,8 +210,10 @@
 		9ADDE08F2111682700E4BB00 /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
 		9ADDE0902111682700E4BB00 /* cvplot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvplot.h; sourceTree = "<group>"; };
 		9ADDE0912111A7D500E4BB00 /* lenna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lenna.png; sourceTree = "<group>"; };
-		9ADDE0922111ECA300E4BB00 /* L03_1_Transform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = L03_1_Transform.cpp; sourceTree = "<group>"; };
 		9ADDE095211293FF00E4BB00 /* L03_2_Mask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_2_Mask.h; sourceTree = "<group>"; };
+		9ADDE09721129D2C00E4BB00 /* L02_1_Basic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L02_1_Basic.h; sourceTree = "<group>"; };
+		9ADDE09821129D7C00E4BB00 /* L02_2_Histogram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L02_2_Histogram.h; sourceTree = "<group>"; };
+		9ADDE09A21129DF500E4BB00 /* L03_1_Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_1_Transform.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -451,9 +450,9 @@
 		9ADDE06E210B60BE00E4BB00 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				9ADDE06F210DF56900E4BB00 /* L02_1_Basic.cpp */,
-				9ADDE07F211153D700E4BB00 /* L02_2_Histogram.cpp */,
-				9ADDE0922111ECA300E4BB00 /* L03_1_Transform.cpp */,
+				9ADDE09721129D2C00E4BB00 /* L02_1_Basic.h */,
+				9ADDE09821129D7C00E4BB00 /* L02_2_Histogram.h */,
+				9ADDE09A21129DF500E4BB00 /* L03_1_Transform.h */,
 				9ADDE095211293FF00E4BB00 /* L03_2_Mask.h */,
 			);
 			path = src;
@@ -552,7 +551,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ADDE0962112946200E4BB00 /* L03_2_Mask.h in Sources */,
 				9ADDDEB3210B599B00E4BB00 /* main.cpp in Sources */,
 				9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */,
 			);

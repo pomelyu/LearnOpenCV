@@ -1,10 +1,13 @@
 //
-//  L03_1_Transform.cpp
+//  L03_1_Transform.h
 //  LearnOpenCV
 //
-//  Created by Chien Chin-yu on 2018/8/1.
+//  Created by Chien Chin-yu on 2018/8/2.
 //  Copyright © 2018 Chien Chin-yu. All rights reserved.
 //
+
+#ifndef L03_1_Transform_h
+#define L03_1_Transform_h
 
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
@@ -99,3 +102,5 @@ void ch03_1_transform() {
         waitKey();
     }
 }
+
+#endif /* L03_1_Transform_h */
