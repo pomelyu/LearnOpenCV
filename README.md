@@ -22,6 +22,8 @@
     - `cv::RNG::unifrom`, `cv::randn`
 - 03.5 Thresholding
 - 03.6 Dilation & Erosion
+- 03.7 Edge detection
+- 03.8 Perspective Transform
 
 
 ### Dependences
@@ -38,3 +40,8 @@
 - [ ] 03.6 Dilation & Erosion
     - [ ] try built-in dilation, erosion, opening and closing function
     - [ ] implement simple dilation, erosion, opening and closing
+- [ ] 03.7 Edge detection
+    - [ ] try built-in Sobel, Laplacian, Canny Edge detection
+    - [ ] implement Canny Edge detection
+- [ ] 03.8 Perspective Transform
+- [ ] mini1 Live sketch
