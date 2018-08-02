@@ -25,7 +25,7 @@ void ch03_5_thresholding() {
     
     {
         vector<int> threshold_type = {
-            CV_THRESH_BINARY, CV_THRESH_BINARY_INV, CV_THRESH_TRUNC, CV_THRESH_TOZERO, CV_THRESH_TOZERO_INV
+            CV_THRESH_BINARY, CV_THRESH_BINARY_INV, CV_THRESH_TRUNC, CV_THRESH_TOZERO, CV_THRESH_TOZERO_INV,
         };
         vector<string> subtitles = { "origin", "binary", "binary inv", "trunc", "to zero", "to zero inv" };
         vector<Mat> images = { gradation };
@@ -40,14 +40,21 @@ void ch03_5_thresholding() {
     Mat image = imread("res/soduku.jpg", IMREAD_GRAYSCALE);
     Mat thresBinary;
     threshold(image, thresBinary, 127, 255, CV_THRESH_BINARY);
+    Mat thresOTSU;
+    // OTSU algorithm is one of global thresholding,
+    // which tries to find the threshold which could minize the variance among black & white part
+    threshold(image, thresOTSU, 127, 255, CV_THRESH_BINARY|CV_THRESH_OTSU);
+    
     Mat thresMean;
     adaptiveThreshold(image, thresMean, 255, CV_ADAPTIVE_THRESH_MEAN_C, CV_THRESH_BINARY, 11, 2);
     Mat thresGaussian;
     adaptiveThreshold(image, thresGaussian, 255, CV_ADAPTIVE_THRESH_GAUSSIAN_C, CV_THRESH_BINARY, 11, 2);
+    
+    Mat dummy = Mat::zeros(100, 100, CV_8U);
     {
-        vector<string> subtitles = { "origin", "binary", "ada-mean", "ada-gaussian" };
-        vector<Mat> images = {image, thresBinary, thresMean, thresGaussian};
-        ShowImages("Adaptive thresholding", subtitles, images, {2, 2}, 300);
+        vector<string> subtitles = { "origin", "", "binary", "OTSU", "ada-mean", "ada-gaussian" };
+        vector<Mat> images = {image, dummy, thresBinary, thresOTSU, thresMean, thresGaussian};
+        ShowImages("Adaptive thresholding", subtitles, images, {2, 3}, 300, false);
     }
     
     Mat myMean;

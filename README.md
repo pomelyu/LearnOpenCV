@@ -18,9 +18,10 @@
     - `cv::filter2D`
     - `cv::GaussianBlur`, `cv::bilateralFilter`, `cv::boxFilter`, `cv::blur`
 - 03.4 Denoise
-    -  `cv::medianBlur()`, `cv::fastNlMeansDenoisingColored`, `cv::fastNlMeansDenoising`
+    - `cv::medianBlur()`, `cv::fastNlMeansDenoisingColored`, `cv::fastNlMeansDenoising`
     - `cv::RNG::unifrom`, `cv::randn`
 - 03.5 Thresholding
+    - `cv::threshold`, `cv::adaptiveThreshold`
 - 03.6 Dilation & Erosion
 - 03.7 Edge detection
 - 03.8 Perspective Transform
@@ -32,11 +33,11 @@
 
 ### Todos
 
-- [ ] 03.5 Thresholding
+- [x] 03.5 Thresholding
     - [x] try simple thresholding
     - [x] try adaptive thresholding by mean kernel, gaussion weights
-    - [x] implement  thresholding by mean kernel, gaussion weights
-    - [ ] try and study threshold_otsu method
+    - [x] implement thresholding by mean kernel, gaussion weights
+    - [x] try and study threshold_otsu method
 - [ ] 03.6 Dilation & Erosion
     - [ ] try built-in dilation, erosion, opening and closing function
     - [ ] implement simple dilation, erosion, opening and closing
