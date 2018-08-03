@@ -98,6 +98,7 @@
 		9ADDE089211160C500E4BB00 /* libcvplot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDE088211160C500E4BB00 /* libcvplot.a */; };
 		9AEB42622113194F00E90590 /* threshold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB42602113194F00E90590 /* threshold.cpp */; };
 		9AEB426921134B4500E90590 /* morphology.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB426721134B4500E90590 /* morphology.cpp */; };
+		9AEB426D2113F24A00E90590 /* edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB426B2113F24A00E90590 /* edge.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -227,6 +228,8 @@
 		9AEB426721134B4500E90590 /* morphology.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = morphology.cpp; sourceTree = "<group>"; };
 		9AEB426821134B4500E90590 /* morphology.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = morphology.hpp; sourceTree = "<group>"; };
 		9AEB426A2113EA4800E90590 /* L03_7_Edge_detection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_7_Edge_detection.h; sourceTree = "<group>"; };
+		9AEB426B2113F24A00E90590 /* edge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = edge.cpp; sourceTree = "<group>"; };
+		9AEB426C2113F24A00E90590 /* edge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = edge.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -523,6 +526,8 @@
 				9AEB42612113194F00E90590 /* threshold.hpp */,
 				9AEB426721134B4500E90590 /* morphology.cpp */,
 				9AEB426821134B4500E90590 /* morphology.hpp */,
+				9AEB426B2113F24A00E90590 /* edge.cpp */,
+				9AEB426C2113F24A00E90590 /* edge.hpp */,
 			);
 			path = cv;
 			sourceTree = "<group>";
@@ -586,6 +591,7 @@
 				9ADDDEB3210B599B00E4BB00 /* main.cpp in Sources */,
 				9AEB42622113194F00E90590 /* threshold.cpp in Sources */,
 				9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */,
+				9AEB426D2113F24A00E90590 /* edge.cpp in Sources */,
 				9AEB426921134B4500E90590 /* morphology.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

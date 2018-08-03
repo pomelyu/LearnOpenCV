@@ -13,6 +13,7 @@
 #include <opencv2/opencv.hpp>
 
 #include "utils.hpp"
+#include "edge.hpp"
 
 using namespace std;
 using namespace cv;
@@ -40,13 +41,16 @@ void ch03_7_edge_detection() {
     // void Canny( InputArray image, OutputArray edges,
     //             double threshold1, double threshold2, int apertureSize=3, bool L2gradient=false )
     // apertureSize: ksize of sobel operator
-    Mat canny;
+    Mat canny, myCanny;
     Canny(image, canny, 70, 180, 3);
+    cy::Canny(image, myCanny, 70, 180, 3);
     
     {
-        vector<string> subtitles = { "origin", "Sobel x", "Sobel y", "Sobel xy", "Laplacian", "Canny(70, 180)" };
-        vector<Mat> images = { image, sobelX, sobelY, sobelXY, laplacian, canny };
-        ShowImages("edge", subtitles, images, {2, 3}, 250);
+        Mat dummy = Mat::zeros(10, 10, CV_8U);
+        vector<string> subtitles = { "origin", "", "Sobel x", "Sobel y", "Sobel xy", "Laplacian",
+            "Canny(70, 180)", "myCanny(70, 180)" };
+        vector<Mat> images = { image, dummy, sobelX, sobelY, sobelXY, laplacian, canny, myCanny };
+        ShowImages("edge", subtitles, images, {2, 4}, 300, false);
     }
 }
 
