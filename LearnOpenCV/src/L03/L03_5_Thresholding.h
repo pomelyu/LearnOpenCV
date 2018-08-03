@@ -13,7 +13,7 @@
 
 #include "cvplot.h"
 #include "utils.hpp"
-#include "cv/threshold.hpp"
+#include "threshold.hpp"
 
 using namespace std;
 using namespace cv;

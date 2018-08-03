@@ -7,17 +7,17 @@
 //
 
 #include <iostream>
-#include "src/L02_1_Basic.h"
-#include "src/L02_2_Histogram.h"
-#include "src/L03_1_Transform.h"
-#include "src/L03_2_Mask.h"
-#include "src/L03_3_Kernel.h"
-#include "src/L03_4_Denoise.h"
-#include "src/L03_5_Thresholding.h"
-#include "src/L03_6_Dilation_and_Erosion.h"
-#include "src/L03_7_Edge_detection.h"
-#include "src/L03_8_Perspective_Transform.h"
-#include "src/Mini01_Live_sketch.h"
+#include "src/L02/L02_1_Basic.h"
+#include "src/L02/L02_2_Histogram.h"
+#include "src/L03/L03_1_Transform.h"
+#include "src/L03/L03_2_Mask.h"
+#include "src/L03/L03_3_Kernel.h"
+#include "src/L03/L03_4_Denoise.h"
+#include "src/L03/L03_5_Thresholding.h"
+#include "src/L03/L03_6_Dilation_and_Erosion.h"
+#include "src/L03/L03_7_Edge_detection.h"
+#include "src/L03/L03_8_Perspective_Transform.h"
+#include "src/L03/Mini01_Live_sketch.h"
 
 int main(int argc, const char * argv[]) {
     int index = 9;

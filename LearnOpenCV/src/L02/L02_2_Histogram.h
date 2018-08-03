@@ -13,7 +13,7 @@
 #include <opencv2/opencv.hpp>
 #include "cvplot.h"
 
-#include "../util/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 using namespace cv;
