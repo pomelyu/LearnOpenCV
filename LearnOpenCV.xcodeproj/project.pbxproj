@@ -226,6 +226,7 @@
 		9AEB42662113474800E90590 /* fingerprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fingerprint.png; sourceTree = "<group>"; };
 		9AEB426721134B4500E90590 /* morphology.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = morphology.cpp; sourceTree = "<group>"; };
 		9AEB426821134B4500E90590 /* morphology.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = morphology.hpp; sourceTree = "<group>"; };
+		9AEB426A2113EA4800E90590 /* L03_7_Edge_detection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_7_Edge_detection.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -473,6 +474,7 @@
 				9ADDE09C2112D5DB00E4BB00 /* L03_4_Denoise.h */,
 				9ADDE09E21130F7C00E4BB00 /* L03_5_Thresholding.h */,
 				9AEB42642113442900E90590 /* L03_6_Dilation_and_Erosion.h */,
+				9AEB426A2113EA4800E90590 /* L03_7_Edge_detection.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
