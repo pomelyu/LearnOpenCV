@@ -25,6 +25,7 @@
 - 03.6 Dilation & Erosion
     - `cv::dilate`, `cv::erode`, `cv::morphologyEx`
 - 03.7 Edge detection
+    - `cv::Sobel`, `cv::Laplacian`, `cv::Canny`
 - 03.8 Perspective Transform
 
 
@@ -42,8 +43,8 @@
 - [x] 03.6 Dilation & Erosion
     - [x] try built-in dilation, erosion, opening and closing function
     - [x] implement simple dilation, erosion, opening and closing
-- [ ] 03.7 Edge detection
-    - [ ] try built-in Sobel, Laplacian, Canny Edge detection
-    - [ ] implement Canny Edge detection
+- [x] 03.7 Edge detection
+    - [x] try built-in Sobel, Laplacian, Canny Edge detection
+    - [x] implement Canny Edge detector
 - [ ] 03.8 Perspective Transform
 - [ ] mini1 Live sketch
