@@ -230,6 +230,9 @@
 		9AEB426A2113EA4800E90590 /* L03_7_Edge_detection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_7_Edge_detection.h; sourceTree = "<group>"; };
 		9AEB426B2113F24A00E90590 /* edge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = edge.cpp; sourceTree = "<group>"; };
 		9AEB426C2113F24A00E90590 /* edge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = edge.hpp; sourceTree = "<group>"; };
+		9AEB426E2114702900E90590 /* L03_8_Perspective_Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L03_8_Perspective_Transform.h; sourceTree = "<group>"; };
+		9AEB4270211470BC00E90590 /* Mini01_Live_sketch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mini01_Live_sketch.h; sourceTree = "<group>"; };
+		9AEB427221148A9E00E90590 /* scan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scan.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +367,7 @@
 		9ADDDFBE210B5C7100E4BB00 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				9AEB427221148A9E00E90590 /* scan.jpg */,
 				9AEB42662113474800E90590 /* fingerprint.png */,
 				9AEB425C2113177800E90590 /* soduku.jpg */,
 				9ADDE081211153F100E4BB00 /* louvre.jpg */,
@@ -478,6 +482,8 @@
 				9ADDE09E21130F7C00E4BB00 /* L03_5_Thresholding.h */,
 				9AEB42642113442900E90590 /* L03_6_Dilation_and_Erosion.h */,
 				9AEB426A2113EA4800E90590 /* L03_7_Edge_detection.h */,
+				9AEB426E2114702900E90590 /* L03_8_Perspective_Transform.h */,
+				9AEB4270211470BC00E90590 /* Mini01_Live_sketch.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
