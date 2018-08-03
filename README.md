@@ -27,6 +27,7 @@
 - 03.7 Edge detection
     - `cv::Sobel`, `cv::Laplacian`, `cv::Canny`
 - 03.8 Perspective Transform
+    - `cv::getPerspectiveTransform`, `cv::warpPerspective`
 
 
 ### Dependences
@@ -46,5 +47,5 @@
 - [x] 03.7 Edge detection
     - [x] try built-in Sobel, Laplacian, Canny Edge detection
     - [x] implement Canny Edge detector
-- [ ] 03.8 Perspective Transform
-- [ ] mini1 Live sketch
+- [x] 03.8 Perspective Transform
+- [x] mini1 Live sketch
