@@ -154,6 +154,8 @@ void cy::Canny(const cv::Mat& src, cv::Mat& dst, const double threshold1, const 
 
 void direction(const Mat& Gx, const Mat& Gy, Mat& dst) {
     Mat theta;
+    float eta = 10e-4;
+    add(Gx, eta, Gx);
     divide(Gy, Gx, theta, 1, CV_64F);
     theta.forEach<double>([](double &pixel, const int* position) {
         // tan(22.5) = 0.414, tand(67.5) = 2.414
