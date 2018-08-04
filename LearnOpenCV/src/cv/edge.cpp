@@ -18,6 +18,7 @@ using namespace cv;
 #define TAN67_5 2.414
 
 void direction(const Mat& Gx, const Mat& Gy, Mat& dst);
+void scaleToUChar(const Mat& src, Mat& dst, float max_rato);
 
 void cy::Canny(const cv::Mat& src, cv::Mat& dst, const double threshold1, const double threshold2, const int ksize ) {
     // Step1. Remove noise (apply gaussian)
@@ -38,7 +39,7 @@ void cy::Canny(const cv::Mat& src, cv::Mat& dst, const double threshold1, const 
     pow(Gy, 2, GyF);
     add(GxF, GyF, G);
     pow(G, 0.5, G);
-    G.convertTo(G, CV_8U);
+    scaleToUChar(G, G, 0.2);
     Gx.release();
     Gy.release();
     GxF.release();
@@ -171,4 +172,28 @@ void direction(const Mat& Gx, const Mat& Gy, Mat& dst) {
     });
     theta.convertTo(dst, CV_8U);
     theta.release();
+}
+
+void scaleToUChar(const Mat& src, Mat& dst, float max_rato) {
+    src.convertTo(dst, CV_32F);
+    double maxValue;
+    minMaxLoc(dst, 0, &maxValue);
+    
+    int bins = 100;
+    int histSize = bins;
+    float range[] = { 0, float(maxValue) };
+    const float* ranges[] = { range };
+    Mat hist;
+    calcHist(&dst, 1, 0, Mat(), hist, 1, &histSize, ranges, true, false);
+
+    int threshold = int(sum(hist.rowRange(5, bins-1))[0] * max_rato);
+    int sum = 0;
+    int i = bins-1;
+    while (i >= 0) {
+        sum += hist.at<float>(i);
+        if (sum > threshold) break;
+        i--;
+    }
+    float scaleRatio = (255 * bins) / ( i * maxValue);
+    convertScaleAbs(dst, dst, scaleRatio);
 }
