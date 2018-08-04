@@ -117,6 +117,7 @@ void cy::Canny(const cv::Mat& src, cv::Mat& dst, const double threshold1, const 
                 
                 Point_<int> p1, p2;
                 visited.at<uchar>(p) = 255;
+                upper.at<uchar>(p) = 255;
                 uchar dir = D.at<char>(p);
                 switch (dir) {
                     case cy::DIRECTION::VERTICAL:
