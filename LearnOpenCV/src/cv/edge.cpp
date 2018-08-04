@@ -97,8 +97,8 @@ void cy::Canny(const cv::Mat& src, cv::Mat& dst, const double threshold1, const 
     // upper: true edge
     // lower: true edge + week edge
     Mat upper, lower;
-    threshold(G, upper, threshold1, 255, THRESH_BINARY);
-    threshold(G, lower, threshold2, 255, THRESH_BINARY);
+    threshold(G, upper, threshold2, 255, THRESH_BINARY);
+    threshold(G, lower, threshold1, 255, THRESH_BINARY);
     G.release();
     
     // Step5. Edge tracking by hyperesis
