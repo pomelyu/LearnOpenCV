@@ -59,15 +59,18 @@ void ShowImages(string title, vector<string> subtitles, vector<Mat> images, pair
             } else {
                 cvplot::moveWindow(name, i * size, j * size);
             }
-            cvplot::resizeWindow(name, size, size);
-            auto &view = cvplot::Window::current().view(name);
-            
             Mat image = images[index];
             if (image.channels() == 1) {
                 Mat c = Mat(image.size(), CV_8U);
                 cvtColor(image, c, CV_GRAY2BGR);
                 image = c;
             }
+            float scaleX = (float) size / image.cols;
+            float scaleY = (float) size / image.rows;
+            int x = (scaleX >= scaleY) ? scaleY * image.cols : size;
+            int y = (scaleY >= scaleX) ? scaleX * image.rows : size;
+            cvplot::resizeWindow(name, x, y);
+            auto &view = cvplot::Window::current().view(name);
             view.drawImage(&image);
             view.finish();
             index++;
