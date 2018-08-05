@@ -235,6 +235,8 @@
 		9AEB427221148A9E00E90590 /* scan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scan.jpg; sourceTree = "<group>"; };
 		9AEB427621159F0200E90590 /* bears.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bears.jpg; sourceTree = "<group>"; };
 		9AEB42772115BE4900E90590 /* bears_low_contrast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bears_low_contrast.jpg; sourceTree = "<group>"; };
+		9AEB427A2117376500E90590 /* L04_1_Contour_Basic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L04_1_Contour_Basic.h; sourceTree = "<group>"; };
+		9AEB427B211738BB00E90590 /* shapes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shapes.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +373,7 @@
 			children = (
 				9AEB42772115BE4900E90590 /* bears_low_contrast.jpg */,
 				9AEB427621159F0200E90590 /* bears.jpg */,
+				9AEB427B211738BB00E90590 /* shapes.png */,
 				9AEB427221148A9E00E90590 /* scan.jpg */,
 				9AEB42662113474800E90590 /* fingerprint.png */,
 				9AEB425C2113177800E90590 /* soduku.jpg */,
@@ -562,6 +565,7 @@
 		9AEB4278211735B800E90590 /* L04 */ = {
 			isa = PBXGroup;
 			children = (
+				9AEB427A2117376500E90590 /* L04_1_Contour_Basic.h */,
 			);
 			path = L04;
 			sourceTree = "<group>";

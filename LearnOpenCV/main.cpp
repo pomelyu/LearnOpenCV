@@ -18,9 +18,10 @@
 #include "src/L03/L03_7_Edge_detection.h"
 #include "src/L03/L03_8_Perspective_Transform.h"
 #include "src/L03/Mini01_Live_sketch.h"
+#include "src/L04/L04_1_Contour_Basic.h"
 
 int main(int argc, const char * argv[]) {
-    int index = 9;
+    int index = 11;
     switch (index) {
         case  0: ch02_1_basic(); break;
         case  1: ch02_2_histogram(); break;
@@ -33,6 +34,7 @@ int main(int argc, const char * argv[]) {
         case  8: ch03_7_edge_detection(); break;
         case  9: ch03_8_perspective(); break;
         case 10: mini01_live_sketch(); break;
+        case 11: ch04_1_contour_basic(); break;
         default: break;
     }
 
