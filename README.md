@@ -28,6 +28,9 @@
     - `cv::Sobel`, `cv::Laplacian`, `cv::Canny`
 - 03.8 Perspective Transform
     - `cv::getPerspectiveTransform`, `cv::warpPerspective`
+- 04.1 Contours Basic
+    - `cv::findContours`, `cv::drawContours`
+
 
 
 ### Dependences
@@ -49,3 +52,6 @@
     - [x] implement Canny Edge detector
 - [x] 03.8 Perspective Transform
 - [x] mini1 Live sketch
+- [x] 04.1 Contours Basic
+    - [x] try built-in findContours, drawContours
+    - [x] implement findContours algorithm
