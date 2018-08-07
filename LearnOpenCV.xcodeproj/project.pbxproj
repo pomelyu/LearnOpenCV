@@ -99,6 +99,7 @@
 		9AEB42622113194F00E90590 /* threshold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB42602113194F00E90590 /* threshold.cpp */; };
 		9AEB426921134B4500E90590 /* morphology.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB426721134B4500E90590 /* morphology.cpp */; };
 		9AEB426D2113F24A00E90590 /* edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB426B2113F24A00E90590 /* edge.cpp */; };
+		9AEB427E2119366000E90590 /* contour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB427C2119366000E90590 /* contour.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -237,6 +238,10 @@
 		9AEB42772115BE4900E90590 /* bears_low_contrast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bears_low_contrast.jpg; sourceTree = "<group>"; };
 		9AEB427A2117376500E90590 /* L04_1_Contour_Basic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L04_1_Contour_Basic.h; sourceTree = "<group>"; };
 		9AEB427B211738BB00E90590 /* shapes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shapes.png; sourceTree = "<group>"; };
+		9AEB427C2119366000E90590 /* contour.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = contour.cpp; sourceTree = "<group>"; };
+		9AEB427D2119366000E90590 /* contour.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = contour.hpp; sourceTree = "<group>"; };
+		9AEB4283211964B200E90590 /* shapes_simple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shapes_simple.png; sourceTree = "<group>"; };
+		9AEB42852119889E00E90590 /* shapes_inv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shapes_inv.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +382,8 @@
 				9AEB427221148A9E00E90590 /* scan.jpg */,
 				9AEB42662113474800E90590 /* fingerprint.png */,
 				9AEB425C2113177800E90590 /* soduku.jpg */,
+				9AEB42852119889E00E90590 /* shapes_inv.png */,
+				9AEB4283211964B200E90590 /* shapes_simple.png */,
 				9ADDE081211153F100E4BB00 /* louvre.jpg */,
 				9ADDE0912111A7D500E4BB00 /* lenna.png */,
 			);
@@ -533,6 +540,8 @@
 				9AEB426821134B4500E90590 /* morphology.hpp */,
 				9AEB426B2113F24A00E90590 /* edge.cpp */,
 				9AEB426C2113F24A00E90590 /* edge.hpp */,
+				9AEB427C2119366000E90590 /* contour.cpp */,
+				9AEB427D2119366000E90590 /* contour.hpp */,
 			);
 			path = cv;
 			sourceTree = "<group>";
@@ -626,6 +635,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AEB427E2119366000E90590 /* contour.cpp in Sources */,
 				9ADDDEB3210B599B00E4BB00 /* main.cpp in Sources */,
 				9AEB42622113194F00E90590 /* threshold.cpp in Sources */,
 				9ADDE084211154EE00E4BB00 /* utils.cpp in Sources */,
