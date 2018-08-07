@@ -70,11 +70,14 @@ void ch04_1_contour_basic() {
         image.copyTo(image_copy);
         contours.clear(); hierarchy.clear();
         findContours(edges_copy, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE);
-        drawContours(image_copy, contours, 0, Scalar(255, 0, 0), 3, 8, hierarchy, 0);
-        drawContours(image_copy, contours, 4, Scalar(0, 255, 0), 3, 8, hierarchy, 0);
-        drawContours(image_copy, contours, 6, Scalar(0, 0, 255), 3, 8, hierarchy, 0);
-        drawContours(image_copy, contours, 12, Scalar(0, 0, 0), 3, 8, hierarchy, 0);
-        subtitles.push_back("contours hierrac");
+        for (int i = 0; i < contours.size(); i++) {
+            if (i % 2 == 0)
+                drawContours(image_copy, contours, i, Scalar(0, 255, 0), 2);
+            else
+                drawContours(image_copy, contours, i, Scalar(0, 0, 255), 2);
+        }
+        
+        subtitles.push_back("contours hierarchy");
         images.push_back(image_copy);
     }
 
