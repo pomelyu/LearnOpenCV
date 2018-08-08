@@ -24,6 +24,8 @@ void nextPoint(Point& pt, bool isOne, cy::ARROW& direction);
 void cy::findContours(const Mat& src, vector<vector<Point> >& contours, vector<Vec4i>& hierarchy) {
     assert(src.type() == CV_8U);
     
+    // image is padded by 1-pixel of background(0) to avoid edge conditions
+    // image is converted from CV_8U to CV_8S, since we will assign negative values to the pixels
     Mat padded = Mat::zeros(src.rows + 2, src.cols + 2, CV_8U);
     src.copyTo(padded.colRange(1, padded.cols-1).rowRange(1, padded.rows-1));
     threshold(padded, padded, 127, 1, THRESH_BINARY);
@@ -31,11 +33,9 @@ void cy::findContours(const Mat& src, vector<vector<Point> >& contours, vector<V
     
     vector<cy::ContourType> contoursType;
     // Frame is the outline of the image
-    vector<Point> frameContour;
-    frameContour.push_back(Point(1, 1));
-    frameContour.push_back(Point(padded.cols-2, 1));
-    frameContour.push_back(Point(padded.cols-2, padded.rows-2));
-    frameContour.push_back(Point(1, padded.rows-2));
+    vector<Point> frameContour = {
+        Point(1, 1), Point(padded.cols-2, 1), Point(padded.cols-2, padded.rows-2), Point(1, padded.rows-2)
+    };
 
     // [NEXT, PREV, FIRST_CHILD, PARENT]
     hierarchy.push_back(Vec4i(-1, -1, -1, -1));
@@ -125,6 +125,8 @@ void assignContourHierarchy(int NBD, cy::ContourType newType, int LNBD, cy::Cont
     // Same type => NBD, LNBD has same parent
     if ((LType == cy::ContourType::OUTER && newType == cy::ContourType::OUTER) ||
         (LType == cy::ContourType::HOLE && newType == cy::ContourType::HOLE)) {
+        // Let S, S' has same parent P
+        // append S to the last of children linked list of P
         hierarchyNode[3] = LHierarchyNode[3];
         
         int nodeIdx = LIndex;
@@ -137,6 +139,9 @@ void assignContourHierarchy(int NBD, cy::ContourType newType, int LNBD, cy::Cont
     }
     // Different type => LNBD is parent
     else {
+        // Let S' be the parent of S
+        // if S' has no child, let S to be first child
+        // else append S to the last of children linked list of S'
         hierarchyNode[3] = LIndex;
         if (LHierarchyNode[2] == -1) {
             LHierarchyNode[2] = index;
