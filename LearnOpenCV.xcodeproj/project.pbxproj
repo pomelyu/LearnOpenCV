@@ -242,6 +242,7 @@
 		9AEB427D2119366000E90590 /* contour.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = contour.hpp; sourceTree = "<group>"; };
 		9AEB4283211964B200E90590 /* shapes_simple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shapes_simple.png; sourceTree = "<group>"; };
 		9AEB42852119889E00E90590 /* shapes_inv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shapes_inv.png; sourceTree = "<group>"; };
+		9AEB4286211C29F700E90590 /* L04_2_Contour_Features.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L04_2_Contour_Features.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -575,6 +576,7 @@
 			isa = PBXGroup;
 			children = (
 				9AEB427A2117376500E90590 /* L04_1_Contour_Basic.h */,
+				9AEB4286211C29F700E90590 /* L04_2_Contour_Features.h */,
 			);
 			path = L04;
 			sourceTree = "<group>";
